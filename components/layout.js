@@ -11,7 +11,6 @@ export default function Layout(props) {
         <title>{props.title}</title>
         <meta name="description" content={props.description} />
         <link rel="icon" href="/favicon.ico" />
-        <script src={props.scriptUrl}></script>
       </Head>
       <Header headerUrl={props.headerUrl} headerH1={props.headerH1} />
       {props.children}
