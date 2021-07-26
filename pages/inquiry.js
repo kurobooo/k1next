@@ -17,7 +17,7 @@ export default function Inquiry() {
           </div>
         </section>
         <section>
-          <Link href="/"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 my-10 rounded">トップページに戻る</button></Link>
+          <Link href="/" passHref><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 my-10 rounded">トップページに戻る</button></Link>
         </section>
 
       </div>
