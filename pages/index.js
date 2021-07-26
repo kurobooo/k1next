@@ -19,9 +19,9 @@ export default function Home() {
     <Layout
       title="K1ファクトリー 浜松市西区雄踏町でホームページ制作・チラシ・ポスターデータ制作ほか"
       description="中小規模のホームページ制作・管理、チラシ・ポスターデータ制作などを行います。ネット印刷を利用し製作価格を抑えます。"
-      headerUrl="img/header-index.jpg"
+      headerUrl="/img/header-index.jpg"
       headerH1="浜松市西区雄踏町でホームページ制作・チラシ・ポスターデータ制作ほか　K1ファクトリー">
-      <div className="mx-auto px-6 py-6 text-center">
+      <div className="mx-auto px-6 py-6 text-center bg-white">
         <section>
           <h1><Image src="/img/logo.png" width={632} height={259} alt="ホームページ制作、デザインのお手伝い K1ファクトリー（ケーワンファクトリー）" className="mx-auto" /></h1>
           <p className="py-5">中小規模のホームページ制作・管理、<br />チラシ・ポスターデータ制作などを行います。<br />ネット印刷を利用し製作価格を抑えます。</p>
