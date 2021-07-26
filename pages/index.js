@@ -67,19 +67,19 @@ export default function Home() {
         <section>
           <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pt-20 pb-5">制作・運営サイトリンク</h1>
           <ul>
-            <li className="py-2"><a href="http://www.bikoh.biz/" target="_blank" rel="noopener" className="hover:underline">美交工業</a>
+            <li className="py-2"><a href="http://www.bikoh.biz/" target="_blank" rel="noopener noreferrer" className="hover:underline">美交工業</a>
             </li>
-            <li className="py-2"><a href="https://www.toshi-kouen.jp/" target="_blank" rel="noopener" className="hover:underline">いこいこ！おおさかの公園</a></li>
-            <li className="py-2"><a href="http://tsuchiya-sr.com/" target="_blank" rel="noopener" className="hover:underline">土屋社会保険労務士事務所</a></li>
-            <li className="py-2"><a href="https://higashiosaka-parks.com/" target="_blank" rel="noopener" className="hover:underline">花園中央公園 |
+            <li className="py-2"><a href="https://www.toshi-kouen.jp/" target="_blank" rel="noopener noreferrer" className="hover:underline">いこいこ！おおさかの公園</a></li>
+            <li className="py-2"><a href="http://tsuchiya-sr.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">土屋社会保険労務士事務所</a></li>
+            <li className="py-2"><a href="https://higashiosaka-parks.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">花園中央公園 |
                   東大阪市特定公園</a></li>
-            <li className="py-2"><a href="http://www.masaukulele.com/" target="_blank" rel="noopener" className="hover:underline">マサウクレレ</a>／<a href="http://www.kuraoka-guitar.com" target="_blank" rel="noopener" className="hover:underline">倉岡ギター教室</a></li>
-            <li className="py-2"><a href="http://www.natsuno-kaikei.com/" target="_blank" rel="noopener" className="hover:underline">夏野健一税理士事務所</a></li>
-            <li className="py-2"><a href="http://osuka-japan.com/" target="_blank" rel="noopener" className="hover:underline">Welcome to
+            <li className="py-2"><a href="http://www.masaukulele.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">マサウクレレ</a>／<a href="http://www.kuraoka-guitar.com" target="_blank" rel="noopener noreferrer" className="hover:underline">倉岡ギター教室</a></li>
+            <li className="py-2"><a href="http://www.natsuno-kaikei.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">夏野健一税理士事務所</a></li>
+            <li className="py-2"><a href="http://osuka-japan.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Welcome to
                   Osuka</a></li>
-            <li className="py-2"><a href="http://axis-mente.com/" target="_blank" rel="noopener" className="hover:underline">コンクリート調査・診断のアクシス</a></li>
-            <li className="py-2"><a href="http://buffetfive.com/" target="_blank" rel="noopener" className="hover:underline">画廊ビュッフェファイヴ</a></li>
-            <li className="py-2"><a href="https://saori-piano.net" target="_blank" rel="noopener" className="hover:underline">なかむらさおり ぴあの教室</a></li>
+            <li className="py-2"><a href="http://axis-mente.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">コンクリート調査・診断のアクシス</a></li>
+            <li className="py-2"><a href="http://buffetfive.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">画廊ビュッフェファイヴ</a></li>
+            <li className="py-2"><a href="https://saori-piano.net" target="_blank" rel="noopener noreferrer" className="hover:underline">なかむらさおり ぴあの教室</a></li>
           </ul>
           <p>ほか</p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 my-10 rounded">お問い合わせ</button>
@@ -87,7 +87,7 @@ export default function Home() {
         <section>
           <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pt-20 pb-5">制作パートナー</h1>
           <ul>
-            <li className="py-2"><a href="http://www.miraigaso.com/" target="_blank" rel="noopener" className="hover:underline">未来画素</a></li>
+            <li className="py-2"><a href="http://www.miraigaso.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">未来画素</a></li>
           </ul>
         </section>
       </div>
