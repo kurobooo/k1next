@@ -1,5 +1,6 @@
 import Layout from '../components/layout'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState } from "react";
 import Lightbox from "lightbox-react";
 import "lightbox-react/style.css";
@@ -25,7 +26,7 @@ export default function Home() {
           <h1><Image src="/img/logo.png" width={632} height={259} alt="ホームページ制作、デザインのお手伝い K1ファクトリー（ケーワンファクトリー）" className="mx-auto" /></h1>
           <p className="py-5">中小規模のホームページ制作・管理、<br />チラシ・ポスターデータ制作などを行います。<br />ネット印刷を利用し製作価格を抑えます。</p>
           <p className="py-5">お気軽にご相談ください。</p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 my-10 rounded">お問い合わせ</button>
+          <Link href="/inquiry"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 my-10 rounded">お問い合わせ</button></Link>
         </section>
         <section>
           <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pt-20 pb-5">これまでの制作ギャラリー</h1>
@@ -81,7 +82,7 @@ export default function Home() {
             <li className="py-2"><a href="https://saori-piano.net" target="_blank" rel="noopener noreferrer" className="hover:underline">なかむらさおり ぴあの教室</a></li>
           </ul>
           <p>ほか</p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 my-10 rounded">お問い合わせ</button>
+          <Link href="/inquiry"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 my-10 rounded">お問い合わせ</button></Link>
         </section>
         <section>
           <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pt-20 pb-5">制作パートナー</h1>
