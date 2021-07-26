@@ -1,8 +1,8 @@
 import Layout from '../components/layout'
 import Image from 'next/image'
-// import React, { useState } from "react";
-// import Lightbox from "lightbox-react";
-// import "lightbox-react/style.css";
+import React, { useState } from "react";
+import Lightbox from "lightbox-react";
+import "lightbox-react/style.css";
 
 const images = [
   "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg", "22.jpg", "23.jpg", "24.jpg", "25.jpg", "26.jpg", "27.jpg", "28.jpg", "29.jpg", "30.jpg", "31.jpg", "32.jpg", "33.jpg", "34.jpg", "35.jpg"
@@ -11,8 +11,8 @@ const title = ["atelier anniversaire", "gran gusto", "浜松ジオラマグラ�
 
 
 export default function Home() {
-  // const [photoIndex, setIndex] = useState(0);
-  // const [isOpen, setisOpen] = useState(false);
+  const [photoIndex, setIndex] = useState(0);
+  const [isOpen, setisOpen] = useState(false);
 
   return (
     <Layout
@@ -37,16 +37,16 @@ export default function Home() {
                   alt={image}
                   width={300}
                   height={300}
-                  // onClick={() => {
-                  //   setisOpen(true), setIndex(index);
-                  // }}
+                  onClick={() => {
+                    setisOpen(true), setIndex(index);
+                  }}
                   className="hover:opacity-80"
                 />
               </li>
             ))}
           </ul>
         </section>
-        {/* {
+        {
           isOpen && (
             <Lightbox
               mainSrc={`/img/${images[photoIndex]}`}
@@ -61,7 +61,7 @@ export default function Home() {
               imageCaption={title[photoIndex]}
             />
           )
-        } */}
+        }
 
         <section>
           <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pt-20 pb-5">制作・運営サイトリンク</h1>
