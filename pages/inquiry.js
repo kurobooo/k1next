@@ -41,11 +41,11 @@ export default function Inquiry() {
               <label htmlFor="_formrun_gotcha">If you are a human, ignore this field</label>
               <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabIndex={-1} />
             </div>
-            <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 my-10 rounded">送信</button>
+            <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-20 mb-20 rounded">送信</button>
           </form>
         </section>
         <section>
-          <Link href="/" passHref><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-20 my-10 rounded">トップページに戻る</button></Link>
+          <Link href="/" passHref><button className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-10 my-10 rounded">トップページに戻る</button></Link>
         </section>
 
       </div>
