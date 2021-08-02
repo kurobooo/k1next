@@ -19,14 +19,20 @@ export default function Home() {
     <Layout
       title="K1ファクトリー 浜松市西区雄踏町でホームページ制作・チラシ・ポスターデータ制作ほか"
       description="中小規模のホームページ制作・管理、チラシ・ポスターデータ制作などを行います。ネット印刷を利用し製作価格を抑えます。"
-      headerUrl="/img/header-index.jpg"
-      headerH1="浜松市西区雄踏町でホームページ制作・チラシ・ポスターデータ制作ほか　K1ファクトリー">
-      <div className="mx-auto px-6 py-6 text-center bg-white">
+    >
+      <div className="text-center" style={{ height: '42vw' }}>
+        <div className="fixed mt-6" style={{ width: '100vw', zIndex: '-1' }}>
+          <Image src="/img/header-index.jpg" width={1200} height={503} alt="ホームページ制作、デザインのお手伝い K1ファクトリー（ケーワンファクトリー）" layout="responsive" />
+        </div>
+        <h1 className="text-sm z-1 pt-8">浜松市西区雄踏町でホームページ制作・チラシ・ポスターデータ制作ほか　K1ファクトリー</h1>
+      </div>
+
+      <div className="mx-auto px-6 pt-10 text-center bg-white">
         <section>
           <h1><Image src="/img/logo.png" width={632} height={259} alt="ホームページ制作、デザインのお手伝い K1ファクトリー（ケーワンファクトリー）" className="mx-auto" /></h1>
-          <p className="py-5">中小規模のホームページ制作・管理、<br />チラシ・ポスターデータ制作などを行います。<br />ネット印刷を利用し製作価格を抑えます。</p>
-          <p className="py-5">お気軽にご相談ください。</p>
-          <Link href="/inquiry" passHref><button className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-20 my-10 rounded">お問い合わせ</button></Link>
+          <p className="py-5 text-sm md:text-base xl:text-lg">中小規模のホームページ制作・管理、<br />チラシ・ポスターデータ制作などを行います。<br />ネット印刷を利用し製作価格を抑えます。</p>
+          <p className="py-5 text-sm md:text-base xl:text-lg">お気軽にご相談ください。</p>
+          <Link href="/inquiry" passHref><button className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-10 mb-10 rounded text-sm md:text-base xl:text-lg">お問い合わせ</button></Link>
         </section>
         <section>
           <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pt-20 pb-5">これまでの制作ギャラリー</h1>
@@ -82,7 +88,7 @@ export default function Home() {
             <li className="py-2"><a href="https://saori-piano.net" target="_blank" rel="noopener noreferrer" className="hover:underline">なかむらさおり ぴあの教室</a></li>
           </ul>
           <p>ほか</p>
-          <Link href="/inquiry" passHref><button className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-20 my-10 rounded">お問い合わせ</button></Link>
+          <Link href="/inquiry" passHref><button className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-10 my-10 rounded text-sm md:text-base xl:text-lg">お問い合わせ</button></Link>
         </section>
         <section>
           <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pt-20 pb-5">制作パートナー</h1>
