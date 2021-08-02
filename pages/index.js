@@ -30,8 +30,8 @@ export default function Home() {
       <div className="mx-auto px-6 pt-10 text-center bg-white">
         <section>
           <h1><Image src="/img/logo.png" width={632} height={259} alt="ホームページ制作、デザインのお手伝い K1ファクトリー（ケーワンファクトリー）" className="mx-auto" /></h1>
-          <p className="py-5 text-sm md:text-base xl:text-lg">中小規模のホームページ制作・管理、<br />チラシ・ポスターデータ制作などを行います。<br />ネット印刷を利用し製作価格を抑えます。</p>
-          <p className="py-5 text-sm md:text-base xl:text-lg">お気軽にご相談ください。</p>
+          <p className="py-5 text-sm md:text-base xl:text-lg">中小規模のホームページ制作・管理<br />チラシ・ポスターデータ制作<br />ネット印刷を利用し製作価格を抑えます</p>
+          <p className="py-5 text-sm md:text-base xl:text-lg">お気軽にご相談ください</p>
           <Link href="/inquiry" passHref><button className="bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-10 mb-10 rounded text-sm md:text-base xl:text-lg">お問い合わせ</button></Link>
         </section>
         <section>
