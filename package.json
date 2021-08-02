@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "yarn run build && next export" 
   },
   "dependencies": {
     "lightbox-react": "^0.3.8",
