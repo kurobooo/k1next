@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
 pre {
-  @apply whitespace-pre-line bg-black text-white p-4;
+  @apply whitespace-pre-line break-all bg-black text-white p-4;
 }
 @tailwind utilities;

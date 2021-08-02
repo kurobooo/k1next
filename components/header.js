@@ -10,7 +10,7 @@ export default function Header(props) {
         </Link>
       </div>
       <nav className="flex-0">
-        <ul className="flex text-center text-white text-sm leading-loose">
+        <ul className="flex text-center text-white text-sm leading-none pt-2.5">
           <li className="flex-0 px-2"><Link href="/"><a className="hover:underline">トップ</a></Link></li>
           <li className="flex-0 px-2"><Link href="/blog"><a className="hover:underline">ブログ</a></Link></li>
           <li className="flex-0 px-2"><Link href="/inquiry"><a className="hover:underline">お問い合わせ</a></Link></li>

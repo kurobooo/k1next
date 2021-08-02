@@ -11,7 +11,7 @@ export default function BlogId({ blog }) {
       </div>
       <article className="w-full sm:w-4/5 mx-auto p-10">
         <div>
-          <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pb-5">{blog.title}</h1>
+          <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pb-5 break-all">{blog.title}</h1>
           <aside className="flex pb-5">
             <time dateTime="XXXX-XX-XX" className="flex-auto"><i className="far fa-clock" />{blog.publishedAt}</time>
             <div className="flex-0 flex">
