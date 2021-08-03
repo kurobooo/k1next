@@ -11,7 +11,6 @@ export default function Layout(props) {
         <title>{props.title}</title>
         <meta name="description" content={props.description} />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossOrigin="anonymous" />
       </Head>
       <Header />
       {props.children}

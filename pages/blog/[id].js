@@ -1,5 +1,9 @@
 import Layout from '../../components/layout'
 import Image from 'next/image'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
+import { faFolderOpen } from "@fortawesome/free-regular-svg-icons";
+
 
 export default function BlogId({ blog }) {
   return (
@@ -13,9 +17,9 @@ export default function BlogId({ blog }) {
         <div>
           <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pb-5 break-all">{blog.title}</h1>
           <aside className="flex pb-5">
-            <time dateTime="XXXX-XX-XX" className="flex-auto"><i className="far fa-clock" />{blog.publishedAt}</time>
+            <time dateTime="XXXX-XX-XX" className="flex-auto flex"><FontAwesomeIcon className="w-4 h-6 flex-0" icon={faClock} />{blog.publishedAt}</time>
             <div className="flex-0 flex">
-              <i className="far fa-folder-open flex-0" />
+              <FontAwesomeIcon className="w-4 h-6 flex-0" icon={faFolderOpen} />
               <ul>
                 {blog.category.map((cat) => (
                   <li className={cat.categorySlug} key={cat.id}>{cat.category}</li>
