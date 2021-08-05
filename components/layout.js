@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
+import { motion } from 'framer-motion'
 
 export default function Layout(props) {
   return (
@@ -13,7 +14,13 @@ export default function Layout(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      {props.children}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        {props.children}
+      </motion.div>
       <Footer />
     </div>
   )
