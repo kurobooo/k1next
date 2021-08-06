@@ -21,12 +21,12 @@ const list = {
 
 const item = {
   visible: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: 100 },
+  hidden: { opacity: 0, y: 10 },
 }
 
 export default function Blog({ blog }) {
   return (
-    <Layout title="ブログ">
+    <Layout title="K1ファクトリー ブログ 一覧">
       <section className="pt-8">
         <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pt-20 pb-5 text-center">最近の投稿</h1>
         <motion.div
@@ -36,7 +36,7 @@ export default function Blog({ blog }) {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-5">
 
           {blog.map((blog) => (
-            <motion.article variants={item} className="col-span-1 mx-5 pb-5 cursor-pointer" key={blog.id}>
+            <motion.article variants={item} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="col-span-1 mx-5 pb-5 cursor-pointer" key={blog.id}>
               <Link href={`/blog/${blog.id}`}>
                 <figure>
                   <a><Image src={blog.eyecatch.url} alt={blog.title} width={1600} height={600} /></a>
