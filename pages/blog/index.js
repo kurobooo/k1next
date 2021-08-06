@@ -36,7 +36,7 @@ export default function Blog({ blog }) {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-5">
 
           {blog.map((blog) => (
-            <motion.article variants={item} className="col-span-1 mx-5 pb-5 cursor-pointer hover:opacity-75" key={blog.id}>
+            <motion.article variants={item} className="col-span-1 mx-5 pb-5 cursor-pointer" key={blog.id}>
               <Link href={`/blog/${blog.id}`}>
                 <figure>
                   <a><Image src={blog.eyecatch.url} alt={blog.title} width={1600} height={600} /></a>

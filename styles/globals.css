@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 pre {
-  @apply whitespace-pre-line break-all bg-black text-white p-4;
+  @apply whitespace-pre-wrap break-all bg-black text-white p-4;
+}
+article p a {
+  @apply hover:underline text-blue-500;
 }
 @tailwind utilities;
