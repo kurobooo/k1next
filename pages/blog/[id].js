@@ -4,10 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock } from "@fortawesome/free-regular-svg-icons"
 import { faFolderOpen } from "@fortawesome/free-regular-svg-icons"
 import Date from '../../components/date'
+import cheerio from 'cheerio'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/rainbow.css'
 
 
-
-export default function BlogId({ blog }) {
+export default function BlogId({ blog, highlightedBody }) {
   return (
     <Layout title={blog.title}>
       <div>
@@ -30,7 +32,7 @@ export default function BlogId({ blog }) {
             </div>
           </aside>
           <div dangerouslySetInnerHTML={{
-            __html: `${blog.content}`,
+            __html: `${highlightedBody}`,
           }} />
         </div>
       </article>
@@ -67,9 +69,18 @@ export const getStaticProps = async context => {
     .then(res => res.json())
     .catch(() => null)
 
+  const $ = cheerio.load(data.content)
+
+  $('pre code').each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text())
+    $(elm).html(result.value)
+    $(elm).addClass('hljs')
+  })
+
   return {
     props: {
       blog: data,
+      highlightedBody: $.html()
     }
   }
 }
