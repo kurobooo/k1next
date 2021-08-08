@@ -23,21 +23,21 @@ export default function Inquiry() {
           {/* class, action, methodを変更しないでください */}
           <form className="formrun w-10/12 mx-auto md:max-w-md" action="https://form.run/api/v1/r/xuhrumhdkror6fvpj54ulnse" method="post">
             {/* ↓自由に要素を追加・編集することができます */}
-            <div className="mb-8">
-              <label className="block">お名前</label>
-              <input name="お名前" type="text" className="w-full py-2 border-b focus:outline-none focus:border-b-2 focus:border-indigo-500 placeholder-gray-500 placeholder-opacity-50" placeholder="山田太郎" />
+            <div className="mb-8 form-group">
+              <label className="block">お名前 [必須]</label>
+              <input name="お名前" data-formrun-required type="text" className="w-full py-2 border-b focus:outline-none focus:border-b-2 focus:border-indigo-500 placeholder-gray-500 placeholder-opacity-50" placeholder="山田太郎" />
             </div>
-            <div className="mb-8">
+            <div className="mb-8 form-group">
               <label className="block">メールアドレス [必須]</label>
               <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required className="w-full py-2 border-b focus:outline-none focus:border-b-2 focus:border-indigo-500 placeholder-gray-500 placeholder-opacity-50" placeholder="Eメール" />
               <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
             </div>
-            <div className="mb-8">
+            <div className="mb-8 form-group">
               <label className="block">お問い合わせ [必須]</label>
               <textarea name="お問い合わせ" data-formrun-required defaultValue={""} className="w-full py-2 border-b focus:outline-none focus:border-b-2 focus:border-indigo-500 placeholder-gray-500 placeholder-opacity-50" placeholder="お問い合わせ内容" />
               <div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
             </div>
-            <div className="mb-8">
+            <div className="mb-8 form-group">
               <label className="mr-4">個人情報利用同意 [必須]</label>
               <input type="checkbox" name="個人情報利用同意" data-formrun-required />
               <div data-formrun-show-if-error="個人情報利用同意">同意してください</div>
