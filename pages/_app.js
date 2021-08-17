@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import { AnimateSharedLayout } from "framer-motion"
 // 追加
 import { GA_TRACKING_ID, pageview } from '../lib/gtag';
-import { AppProps } from 'next/app';
+// import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
