@@ -5,17 +5,6 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
 
-
-// function MyApp({ Component, pageProps }) {
-//   return (
-//     <AnimateSharedLayout>
-//       <Component {...pageProps} />
-//     </AnimateSharedLayout>
-//   )
-// }
-
-// export default MyApp
-
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
