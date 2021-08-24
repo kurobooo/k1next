@@ -6,7 +6,7 @@ import { faFolderOpen } from "@fortawesome/free-regular-svg-icons"
 import Date from '../../components/date'
 import cheerio from 'cheerio'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/rainbow.css'
+import 'highlight.js/styles/base16/bright.css'
 
 
 export default function BlogId({ blog, highlightedBody }) {
