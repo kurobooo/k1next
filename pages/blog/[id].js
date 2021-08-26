@@ -16,7 +16,7 @@ export default function BlogId({ blog, highlightedBody }) {
           <Image src={blog.eyecatch.url} alt={blog.title} width={1600} height={600} />
         </figure>
       </div>
-      <article className="w-full sm:w-4/5 mx-auto p-10 text-sm md:text-base xl:text-lg">
+      <article className="w-full sm:w-4/5 mx-auto p-10 text-sm xl:text-base">
         <div>
           <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pb-5 break-all">{blog.title}</h1>
           <aside className="flex pb-5">
