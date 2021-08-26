@@ -6,8 +6,7 @@ import { faFolderOpen } from "@fortawesome/free-regular-svg-icons"
 import Date from '../../components/date'
 import cheerio from 'cheerio'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/base16/bright.css'
-
+import 'highlight.js/styles/vs2015.css'
 
 export default function BlogId({ blog, highlightedBody }) {
   return (
@@ -31,8 +30,11 @@ export default function BlogId({ blog, highlightedBody }) {
               </ul>
             </div>
           </aside>
+          {/* <div dangerouslySetInnerHTML={{
+              __html: blog.content
+            }} /> */}
           <div dangerouslySetInnerHTML={{
-            __html: `${highlightedBody}`,
+            __html: highlightedBody
           }} />
         </div>
       </article>
@@ -76,6 +78,7 @@ export const getStaticProps = async context => {
     $(elm).html(result.value)
     $(elm).addClass('hljs')
   })
+
 
   return {
     props: {
