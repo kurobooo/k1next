@@ -11,7 +11,10 @@ import Script from 'next/script'
 
 export default function BlogId({ blog, highlightedBody }) {
   return (
-    <Layout title={blog.title}>
+    <Layout
+      title={blog.title}
+      description={blog.excerpt}
+    >
       <div>
         <figure>
           <Image src={blog.eyecatch.url} alt={blog.title} width={1600} height={600} />
@@ -96,7 +99,6 @@ export const getStaticProps = async context => {
     $(elm).html(result.value)
     $(elm).addClass('hljs')
   })
-
 
   return {
     props: {

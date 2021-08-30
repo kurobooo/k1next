@@ -26,7 +26,10 @@ const item = {
 
 export default function Blog({ blog }) {
   return (
-    <Layout title="K1ファクトリー ブログ 一覧">
+    <Layout
+      title="K1ファクトリー ブログ 一覧"
+      description="静的サイトジェネレータとしてNext.jsによるJamStackなサイト。日本製ヘッドレスCMS「microCMS」を使ったブログです。制作手順など備忘録として掲載しています。"
+    >
       <section className="pt-8">
         <h1 className="font-bold text-xl sm:text-2xl xl:text-4xl pt-20 pb-5 text-center">最近の投稿</h1>
         <motion.div
