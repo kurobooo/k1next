@@ -14,6 +14,7 @@ export default function Header(props) {
           <li className="flex-0 px-2"><Link href="/"><a className="hover:underline">トップ</a></Link></li>
           <li className="flex-0 px-2"><Link href="/blog"><a className="hover:underline">ブログ</a></Link></li>
           <li className="flex-0 px-2"><Link href="/inquiry"><a className="hover:underline">お問い合わせ</a></Link></li>
+          <li className="flex-0 px-2"><Link href="/cal"><a className="hover:underline">カレンダー</a></Link></li>
         </ul>
       </nav>
     </header>
