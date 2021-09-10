@@ -5,12 +5,37 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import '@fullcalendar/common/main.css'
 import '@fullcalendar/daygrid/main.css'
 
-export default function Callendar() {
+export default function Callendar({ events, holidaysData }) {
+
+  const allevents = events.map((event) => (
+    { title: `${event.title}`, start: `${event.eDateStart}`, end: `${event.eDateEnd}`, url: `/event/${event.id}` }
+  ))
+
+  const holidays = Object.keys(holidaysData)
+  let holidaysDates = []
+  for (let i = 0; i < holidays.length; i++) {
+    let holiday = {
+      title: holidaysData[holidays[i]],
+      start: holidays[i],
+      className: "holiday",
+      holiday: holidays[i],
+      display: 'background',
+      color: 'pink',
+    }
+    holidaysDates.push(holiday)
+  }
+
+  const wholeEvents = allevents.concat(holidaysDates)
+
+  // console.log(holidaysDates)
+  // console.log(holidays[0])//key
+  // console.log(holidaysData[holidays[0]])//値
+  // console.log(wholeEvents)
 
   return (
     <Layout
       title="カレンダー：K1ファクトリー 浜松市西区雄踏町でホームページ制作・チラシ・ポスターデータ制作ほか"
-      description="テストでGoogleカレンダーを表示"
+      description="fullcalendarをお試し中です。"
     >
 
       <div className="text-center">
@@ -21,7 +46,18 @@ export default function Callendar() {
         <section>
           <FullCalendar
             plugins={[dayGridPlugin]}
-            initialEvents={[{ title: "initial event", start: new Date() }]}
+            locale="ja"//日本語に
+            firstDay="1"//月曜から
+            businessHours={false}//土日の背景色変更
+            // events={allevents}
+            // events={[{ title: `${holidaysData[holidays[0]]}`, start: `${holidays[0]}` }]}
+            events={wholeEvents}
+            dayCellContent={(e) =>
+              (e.dayNumberText = e.dayNumberText.replace("日", ""))//「日」表示を削除
+            }
+            displayEventTime={true}
+            displayEventEnd={true}
+            eventTimeFormat={{ day: 'numeric', hour: 'numeric', minute: '2-digit' }}//開始日時-終了日時
           />
         </section>
         <section>
@@ -30,6 +66,26 @@ export default function Callendar() {
 
       </div>
     </Layout >
-
   )
 }
+
+// データをテンプレートに受け渡す部分の処理を記述します
+export const getStaticProps = async () => {
+  const key = {
+    headers: { 'X-API-KEY': process.env.EVENTS_API_KEY },
+  }
+  const data = await fetch('https://k1events.microcms.io/api/v1/events?limit=100', key)
+    .then(res => res.json())
+    .catch(() => null)
+
+  const hdata = await fetch('https://holidays-jp.github.io/api/v1/date.json')
+    .then(res => res.json())
+    .catch(() => null)
+
+  return {
+    props: {
+      events: data.contents,
+      holidaysData: hdata
+    },
+  };
+};

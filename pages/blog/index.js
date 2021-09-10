@@ -37,7 +37,6 @@ export default function Blog({ blog }) {
           animate="visible"
           variants={list}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-5">
-
           {blog.map((blog) => (
             <motion.article variants={item} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="col-span-1 mx-5 pb-5 cursor-pointer" key={blog.id}>
               <Link href={`/blog/${blog.id}`}>
@@ -50,9 +49,7 @@ export default function Blog({ blog }) {
               </Link>
             </motion.article>
           ))}
-
         </motion.div>
-
       </section>
     </Layout>
   )
