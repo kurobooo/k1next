@@ -78,7 +78,10 @@ export const getStaticProps = async () => {
     .then(res => res.json())
     .catch(() => null)
 
-  const hdata = await fetch('https://holidays-jp.github.io/api/v1/date.json')
+  const key2 = {
+    headers: {},
+  }
+  const hdata = await fetch('https://holidays-jp.github.io/api/v1/date.json', key2)
     .then(res => res.json())
     .catch(() => null)
 
