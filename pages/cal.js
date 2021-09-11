@@ -84,13 +84,13 @@ export const getStaticProps = async () => {
   // .catch(() => null)
 
 
-  // const v = { events: data.contents, holidaysData: hdata }
+  const v = { events: data.contents, holidaysData: hdata }
 
   return {
-    props: {
-      events: data.contents,
-      holidaysData: hdata
-    },
-    // props: JSON.parse(JSON.stringify(v))
+    // props: {
+    //   events: data.contents,
+    //   holidaysData: hdata
+    // },
+    props: JSON.parse(JSON.stringify(v))
   };
 };
