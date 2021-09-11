@@ -69,9 +69,12 @@ export const getStaticProps = async () => {
   const key = {
     headers: { 'X-API-KEY': process.env.EVENTS_API_KEY },
   }
-  const data = await fetch('https://k1events.microcms.io/api/v1/events?limit=100', key)
-    .then(res => res.json())
-    .catch(() => null)
+  const res = await fetch('https://k1events.microcms.io/api/v1/events?limit=100', key)
+  const data = await res.json()
+
+  // const data = await fetch('https://k1events.microcms.io/api/v1/events?limit=100', key)
+  // .then(res => res.json())
+  // .catch(() => null)
 
   const res2 = await fetch('https://holidays-jp.github.io/api/v1/date.json')
   const hdata = await res2.json()
