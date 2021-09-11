@@ -5,28 +5,28 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import '@fullcalendar/common/main.css'
 import '@fullcalendar/daygrid/main.css'
 
-// export default function Callendar({ events, holidaysData }) {
-export default function Callendar({ events }) {
+export default function Callendar({ events, holidaysData }) {
+  // export default function Callendar({ events }) {
 
   const allevents = events.map((event) => (
     { title: `${event.title}`, start: `${event.eDateStart}`, end: `${event.eDateEnd}`, url: `/event/${event.id}` }
   ))
 
-  // const holidays = Object.keys(holidaysData)
-  // let holidaysDates = []
-  // for (let i = 0; i < holidays.length; i++) {
-  //   let holiday = {
-  //     title: holidaysData[holidays[i]],
-  //     start: holidays[i],
-  //     className: "holiday",
-  //     holiday: holidays[i],
-  //     display: 'background',
-  //     color: 'pink',
-  //   }
-  //   holidaysDates.push(holiday)
-  // }
+  const holidays = Object.keys(holidaysData)
+  let holidaysDates = []
+  for (let i = 0; i < holidays.length; i++) {
+    let holiday = {
+      title: holidaysData[holidays[i]],
+      start: holidays[i],
+      className: "holiday",
+      holiday: holidays[i],
+      display: 'background',
+      color: 'pink',
+    }
+    holidaysDates.push(holiday)
+  }
 
-  // const wholeEvents = allevents.concat(holidaysDates)
+  const wholeEvents = allevents.concat(holidaysDates)
 
   return (
     <Layout
@@ -47,8 +47,8 @@ export default function Callendar({ events }) {
             businessHours={false}//土日の背景色変更
             // events={holidaysDates}
             // events={[{ title: `${holidaysData[holidays[0]]}`, start: `${holidays[0]}` }]}
-            // events={wholeEvents}
-            events={allevents}
+            events={wholeEvents}
+            // events={allevents}
             dayCellContent={(e) =>
               (e.dayNumberText = e.dayNumberText.replace("日", ""))//「日」表示を削除
             }
@@ -75,16 +75,16 @@ export const getStaticProps = async () => {
     .then(res => res.json())
     .catch(() => null)
 
-  // const hdata = await fetch('https://holidays-jp.github.io/api/v1/date.json')
-  //   .then(res => res.json())
-  //   .catch(() => null)
+  const hdata = await fetch('https://holidays-jp.github.io/api/v1/date.json')
+    .then(res => res.json())
+    .catch(() => null)
 
   // const v = { events: data.contents, holidaysData: hdata }
 
   return {
     props: {
       events: data.contents,
-      // holidaysData: hdata
+      holidaysData: hdata
     },
     // props: JSON.parse(JSON.stringify(v))
   };
