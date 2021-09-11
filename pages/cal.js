@@ -5,7 +5,8 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import '@fullcalendar/common/main.css'
 import '@fullcalendar/daygrid/main.css'
 
-export default function Callendar({ events, holidaysData }) {
+// export default function Callendar({ events, holidaysData }) {
+export default function Callendar({ events }) {
 
   const allevents = events.map((event) => (
     { title: `${event.title}`, start: `${event.eDateStart}`, end: `${event.eDateEnd}`, url: `/event/${event.id}` }
@@ -46,6 +47,7 @@ export default function Callendar({ events, holidaysData }) {
             businessHours={false}//土日の背景色変更
             // events={holidaysDates}
             // events={[{ title: `${holidaysData[holidays[0]]}`, start: `${holidays[0]}` }]}
+            // events={wholeEvents}
             events={allevents}
             dayCellContent={(e) =>
               (e.dayNumberText = e.dayNumberText.replace("日", ""))//「日」表示を削除
@@ -69,18 +71,13 @@ export const getStaticProps = async () => {
   const key = {
     headers: { 'X-API-KEY': process.env.EVENTS_API_KEY },
   }
-  const res = await fetch('https://k1events.microcms.io/api/v1/events?limit=100', key)
-  const data = await res.json()
-
-  // const data = await fetch('https://k1events.microcms.io/api/v1/events?limit=100', key)
-  // .then(res => res.json())
-  // .catch(() => null)
-
+  const data = await fetch('https://k1events.microcms.io/api/v1/events?limit=100', key)
+    .then(res => res.json())
+    .catch(() => null)
 
   // const hdata = await fetch('https://holidays-jp.github.io/api/v1/date.json')
-  // .then(res => res.json())
-  // .catch(() => null)
-
+  //   .then(res => res.json())
+  //   .catch(() => null)
 
   // const v = { events: data.contents, holidaysData: hdata }
 
