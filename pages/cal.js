@@ -73,16 +73,20 @@ export const getStaticProps = async () => {
     .then(res => res.json())
     .catch(() => null)
 
-  const hdata = await fetch('https://holidays-jp.github.io/api/v1/date.json')
-    .then(res => res.json())
-    .catch(() => null)
+  const res2 = await fetch('https://holidays-jp.github.io/api/v1/date.json')
+  const hdata = await res2.json()
+
+  // const hdata = await fetch('https://holidays-jp.github.io/api/v1/date.json')
+  // .then(res => res.json())
+  // .catch(() => null)
+
 
   // const v = { events: data.contents, holidaysData: hdata }
 
   return {
     props: {
-      events: data.contents || null,
-      holidaysData: hdata || null
+      events: data.contents,
+      holidaysData: hdata
     },
     // props: JSON.parse(JSON.stringify(v))
   };
