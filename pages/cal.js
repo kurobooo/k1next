@@ -62,6 +62,17 @@ export default function Callendar({ events, holidaysData }) {
         </section>
 
       </div>
+      <style jsx>{`
+        td.fc-day-sun {
+          background-color:#ffeaea;
+        }
+        td.fc-day-sat {
+          background-color:#eaf4ff;
+        }
+        .holiday {
+          color: red;
+        }
+      `}</style>
     </Layout >
   )
 }
