@@ -5,12 +5,11 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import '@fullcalendar/common/main.css'
 import '@fullcalendar/daygrid/main.css'
 
-// export default function Callendar({ events, holidaysData }) {
-export default function Callendar({ holidaysData }) {
+export default function Callendar({ events, holidaysData }) {
 
-  // const allevents = events.map((event) => (
-  //   { title: `${event.title}`, start: `${event.eDateStart}`, end: `${event.eDateEnd}`, url: `/event/${event.id}` }
-  // ))
+  const allevents = events.map((event) => (
+    { title: `${event.title}`, start: `${event.eDateStart}`, end: `${event.eDateEnd}`, url: `/event/${event.id}` }
+  ))
 
   const holidays = Object.keys(holidaysData)
   let holidaysDates = []
@@ -26,7 +25,7 @@ export default function Callendar({ holidaysData }) {
     holidaysDates.push(holiday)
   }
 
-  // const wholeEvents = allevents.concat(holidaysDates)
+  const wholeEvents = allevents.concat(holidaysDates)
 
   return (
     <Layout
@@ -45,9 +44,9 @@ export default function Callendar({ holidaysData }) {
             locale="ja"//日本語に
             firstDay="1"//月曜から
             businessHours={false}//土日の背景色変更
-            events={holidaysDates}
+            // events={holidaysDates}
             // events={[{ title: `${holidaysData[holidays[0]]}`, start: `${holidays[0]}` }]}
-            // events={wholeEvents}
+            events={wholeEvents}
             dayCellContent={(e) =>
               (e.dayNumberText = e.dayNumberText.replace("日", ""))//「日」表示を削除
             }
@@ -67,20 +66,20 @@ export default function Callendar({ holidaysData }) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-  // const key = {
-  //   headers: { 'X-API-KEY': process.env.EVENTS_API_KEY },
-  // }
-  // const data = await fetch('https://k1events.microcms.io/api/v1/events?limit=100', key)
-  //   .then(res => res.json())
-  //   .catch(() => null)
+  const key = {
+    headers: { 'X-API-KEY': process.env.EVENTS_API_KEY },
+  }
+  const data = await fetch('https://k1events.microcms.io/api/v1/events?limit=100', key)
+    .then(res => res.json())
+    .catch(() => null)
 
   const hdata = await fetch('https://holidays-jp.github.io/api/v1/date.json')
-    .then(res => res.json())
+    .then(res2 => res2.json())
     .catch(() => null)
 
   return {
     props: {
-      // events: data.contents,
+      events: data.contents,
       holidaysData: hdata
     },
   };
