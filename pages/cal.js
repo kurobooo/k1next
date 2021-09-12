@@ -43,7 +43,7 @@ export default function Callendar({ events, holidaysData }) {
             plugins={[dayGridPlugin]}
             locale="ja"//日本語に
             firstDay="1"//月曜から
-            height="auto"
+            contentHeight="auto"
             businessHours={false}//土日の背景色変更
             // events={[{ title: `${holidaysData[holidays[0]]}`, start: `${holidays[0]}` }]}
             events={wholeEvents}
