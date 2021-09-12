@@ -6,7 +6,6 @@ import '@fullcalendar/common/main.css'
 import '@fullcalendar/daygrid/main.css'
 
 export default function Callendar({ events, holidaysData }) {
-  // export default function Callendar({ events }) {
 
   const allevents = events.map((event) => (
     { title: `${event.title}`, start: `${event.eDateStart}`, end: `${event.eDateEnd}`, url: `/event/${event.id}` }
@@ -44,11 +43,10 @@ export default function Callendar({ events, holidaysData }) {
             plugins={[dayGridPlugin]}
             locale="ja"//日本語に
             firstDay="1"//月曜から
+            height="auto"
             businessHours={false}//土日の背景色変更
-            // events={holidaysDates}
             // events={[{ title: `${holidaysData[holidays[0]]}`, start: `${holidays[0]}` }]}
             events={wholeEvents}
-            // events={allevents}
             dayCellContent={(e) =>
               (e.dayNumberText = e.dayNumberText.replace("日", ""))//「日」表示を削除
             }
@@ -90,13 +88,10 @@ export const getStaticProps = async () => {
     .then(res => res.json())
     .catch(() => null)
 
-  // const v = { events: data.contents, holidaysData: hdata }
-
   return {
     props: {
       events: data.contents,
       holidaysData: hdata
     },
-    // props: JSON.parse(JSON.stringify(v))
   };
 };
