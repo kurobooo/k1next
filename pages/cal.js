@@ -1,9 +1,15 @@
 import Layout from '../components/layout'
 import Link from 'next/link'
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import '@fullcalendar/common/main.css'
-import '@fullcalendar/daygrid/main.css'
+// import FullCalendar from "@fullcalendar/react";
+// import dayGridPlugin from "@fullcalendar/daygrid";
+// import '@fullcalendar/common/main.css'
+// import '@fullcalendar/daygrid/main.css'
+import dynamic from 'next/dynamic'
+
+const FullCalendar = dynamic(() => import('../components/fullcalendar'), {
+  ssr: false
+});
+
 
 export default function Callendar({ events, holidaysData }) {
 
@@ -40,7 +46,7 @@ export default function Callendar({ events, holidaysData }) {
       <div className="px-6 pt-20 text-center bg-white">
         <section>
           <FullCalendar
-            plugins={[dayGridPlugin]}
+            // plugins={[dayGridPlugin]}
             locale="ja"//日本語に
             firstDay="1"//月曜から
             contentHeight="auto"
