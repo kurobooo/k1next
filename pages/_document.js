@@ -6,8 +6,7 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          {/* <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} /> */}
-          <link rel="preload" as="script" href={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
               __html: `
