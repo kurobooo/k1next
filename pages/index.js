@@ -42,8 +42,8 @@ export default function Home() {
                 <Image
                   src={`/img/${image}`}
                   alt={image}
-                  width={300}
-                  height={300}
+                  width={600}
+                  height={600}
                   onClick={() => {
                     setisOpen(true), setIndex(index);
                   }}
