@@ -20,8 +20,6 @@ export default function Layout(props) {
         transition={{ delay: 0.3 }}
       >
         {props.children}
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9JRBP6"
-          height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
       </motion.div>
       <Footer />
     </div>
