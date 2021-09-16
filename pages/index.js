@@ -49,6 +49,7 @@ export default function Home() {
                     setisOpen(true), setIndex(index);
                   }}
                   className="hover:opacity-80"
+                  loading="lazy"
                 />
               </li>
             ))}
