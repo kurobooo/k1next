@@ -21,7 +21,7 @@ export default function Inquiry() {
         <section>
           <Script src="https://sdk.form.run/js/v2/embed.js"></Script>
           <div
-            class="formrun-embed"
+            className="formrun-embed"
             data-formrun-form="@info-1626920606"
             data-formrun-redirect="true">
           </div>
