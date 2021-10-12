@@ -19,12 +19,7 @@ export default function Inquiry() {
 
       <div className="px-6 pt-20 text-center bg-white">
         <section>
-          <Script src="https://sdk.form.run/js/v2/embed.js"></Script>
-          <div
-            className="formrun-embed"
-            data-formrun-form="@info-1626920606"
-            data-formrun-redirect="true">
-          </div>
+          <iframe src="https://form.run/embed/@info-1626920606" frameBorder="no" style={{ backgroundColor: 'rgb(255, 255, 255)', width: '100%', height: '900px', display: 'block' }} title="お問い合わせフォーム" />
 
         </section>
         <section>
