@@ -19,7 +19,7 @@ export default function Inquiry() {
 
       <div className="px-6 pt-20 text-center bg-white">
         <section>
-          <iframe src="https://form.run/embed/@info-1626920606" frameBorder="no" style={{ backgroundColor: 'rgb(255, 255, 255)', width: '100%', height: '900px', display: 'block' }} title="お問い合わせフォーム" />
+          <iframe src="https://form.run/embed/@info-1626920606" frameBorder="no" style={{ backgroundColor: 'rgb(255, 255, 255)', width: '100%', height: '926px', display: 'block' }} title="お問い合わせフォーム" />
 
         </section>
         <section>
